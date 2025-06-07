@@ -9,7 +9,7 @@
 	\caption{Внутренние поля модуля app.py\label{table:app.py_fields}}\\
 	\hline \centrow \setlength{\baselineskip}{0.7\baselineskip} Внутреннее поле & \centrow \setlength{\baselineskip}{0.7\baselineskip} Тип поля & \centrow Описание поля \\ \hline
 	\endfirsthead
-	\caption*{Продолжение таблицы \ref{table:app.py_fields}}\\ \hline
+	\caption*{Продолжение таблицы \ref{table:app.py_fields}}\\ 
 	\centrow Внутреннее поле & \centrow Тип поля & \centrow Описание поля \\ \hline
 	\finishhead
 	app & Flask & Экземпляр приложения Flask, используемый для маршрутизации и обработки запросов \\ \hline
@@ -21,7 +21,8 @@
 	\caption{Методы модуля app.py\label{table:app.py}}\\
 	\hline \centrow \setlength{\baselineskip}{0.7\baselineskip} Название метода & \centrow \setlength{\baselineskip}{0.7\baselineskip} Параметры метода & \centrow Возвращаемое значение & \centrow Описание метода \\ \hline
 	\endfirsthead
-	\caption*{Продолжение таблицы \ref{table:app.py}}\\ \hline
+	\caption*{Продолжение таблицы \ref{table:app.py}}\\ 
+	\hline \centrow \setlength{\baselineskip}{0.7\baselineskip} Название метода & \centrow \setlength{\baselineskip}{0.7\baselineskip} Параметры метода & \centrow Возвращаемое значение & \centrow Описание метода \\ \hline
 	\finishhead
 	default & obj: Any — объект для сериализации & Сериализуемый объект (float для Decimal, str для date/datetime, или результат базового метода) & Преобразует объекты типа Decimal в float, date/datetime в строку ISO-формата, для остальных вызывает базовый метод JSONEncoder \\ \hline
 	get\_db & Отсутствуют & psycopg2.connect — объект соединения с базой данных & Устанавливает соединение с базой данных PostgreSQL (bookstore\_db) \\ \hline
@@ -55,8 +56,8 @@
 	\caption{Внутренние поля модуля app.js\label{table:app.js_fields}}\\
 	\hline \centrow \setlength{\baselineskip}{0.7\baselineskip} Внутреннее поле & \centrow \setlength{\baselineskip}{0.7\baselineskip} Тип поля & \centrow Описание поля \\ \hline
 	\endfirsthead
-	\caption*{Продолжение таблицы \ref{table:app.js_fields}}\\ \hline
-	\centrow Внутреннее поле & \centrow Тип поля & \centrow Описание поля \\ \hline
+	\caption*{Продолжение таблицы \ref{table:app.js_fields}}\\ 
+	\hline \centrow \setlength{\baselineskip}{0.7\baselineskip} Внутреннее поле & \centrow \setlength{\baselineskip}{0.7\baselineskip} Тип поля & \centrow Описание поля \\ \hline
 	\finishhead
 	cart & Array & Локальная корзина пользователя, хранящая ID книг и их количество, сохраняется в localStorage \\ \hline
 	allBooks & Array & Список всех книг, полученных с сервера, используется для отображения и управления \\ \hline
@@ -75,7 +76,8 @@
 	\caption{Методы модуля app.js\label{table:app.js}}\\
 	\hline \centrow \setlength{\baselineskip}{0.7\baselineskip} Название метода & \centrow \setlength{\baselineskip}{0.7\baselineskip} Параметры метода & \centrow Возвращаемое значение & \centrow Описание метода \\ \hline
 	\endfirsthead
-	\caption*{Продолжение таблицы \ref{table:app.js}}\\ \hline
+	\caption*{Продолжение таблицы \ref{table:app.js}}\\ 
+	\hline \centrow \setlength{\baselineskip}{0.7\baselineskip} Название метода & \centrow \setlength{\baselineskip}{0.7\baselineskip} Параметры метода & \centrow Возвращаемое значение & \centrow Описание метода \\ \hline
 	\finishhead
 	toggleAuth Dropdown & Отсутствуют & Отсутствует & Переключает видимость выпадающего меню аутентификации \\ \hline
 	toggleOrders Dropdown & Отсутствуют & Отсутствует & Переключает видимость меню заказов и загружает заказы пользователя или все заказы (для админов/сотрудников) \\ \hline
@@ -133,13 +135,15 @@ styles.css — файл стилей, определяющий внешний в
 
 \subsection{Системное тестирование разработанной программной системы}
 
+На рисунке~\ref{fig:1} изображена главная страница сайта, демонстрирующая каталог книг с пагинацией, поисковой строкой и кнопками для добавления книг в корзину.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/Главная_страница_1}
+	\includegraphics[width=0.9\linewidth]{images/Главная_страница_1}
 	\caption{Главная страница сайта}
 	\label{fig:1}
 \end{figure}
 
+На рисунке~\ref{fig:screenshot3} показано окно входа, обеспечивающее авторизацию пользователей. Модальное окно содержит поля для ввода имени пользователя и пароля, а также кнопку переключения на форму регистрации.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{images/Screenshot_3}
@@ -147,75 +151,81 @@ styles.css — файл стилей, определяющий внешний в
 	\label{fig:screenshot3}
 \end{figure}
 
+На рисунке~\ref{fig:book_details} представлена подробная информация о книге, отображаемая в модальном окне при выборе книги из каталога. Окно включает название, автора, цену, дату публикации, жанры, описание и наличие на складе, а также кнопку добавления в корзину, что демонстрирует корректную работу функции просмотра деталей.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/подробнее}
 	\caption{Подробная информация о книге}
-	\label{fig:}
+	\label{fig:book_details}
 \end{figure}
 
-
+На рисунке~\ref{fig:screenshot5} продемонстрирована работа поисковой строки, позволяющая фильтровать книги по названию.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/Screenshot_5}
+	\includegraphics[width=0.8\linewidth]{images/Screenshot_5}
 	\caption{Демонстрация работы поисковой строки}
 	\label{fig:screenshot5}
 \end{figure}
 
+На рисунке~\ref{fig:cart} изображена корзина пользователя, содержащая выбранные книги с возможностью изменения количества и удаления позиций. Итоговая сумма обновляется автоматически, а кнопка «Оформить заказ» активна при наличии товаров.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/корзинка}
+	\includegraphics[width=0.9\linewidth]{images/корзинка}
 	\caption{Корзина пользователя}
-	\label{fig:}
+	\label{fig:cart}
 \end{figure}
 
+На рисунке~\ref{fig:order_success} показано уведомление об успешном оформлении заказа с указанием номера, даты, суммы и статуса.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/заказсделан}
 	\caption{Уведомление об успешном заказе}
-	\label{fig:}
+	\label{fig:order_success}
 \end{figure}
 
+На рисунке~\ref{fig:222} представлен список заказов пользователя, включающий книги, номер, дату, сумму и статус.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{images/222}
+	\includegraphics[width=0.7\linewidth]{images/222}
 	\caption{Список заказов пользователя}
 	\label{fig:222}
 \end{figure}
 
+На рисунках~\ref{fig:22},~\ref{fig:33},~\ref{fig:44},~\ref{fig:55} и~\ref{fig:66} показана главная страница, окно заказов и панель для пользователей с ролью администратора или сотрудника, предоставляющая доступ к функциям управления магазином. Интерфейс включает кнопки и панели для добавления и редактирования книг, а также просмотра заказов.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{images/Главная_страница_администратора}
+	\includegraphics[width=0.9\linewidth]{images/Главная_страница_администратора}
 	\caption{Главная страница администратора/сотрудника}
 	\label{fig:22}
 \end{figure}
 
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/панельадмина}
+	\includegraphics[width=0.9\linewidth]{images/панельадмина}
 	\caption{Панель администратора}
-	\label{fig:}
+	\label{fig:33}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/добавление}
+	\includegraphics[width=0.9\linewidth]{images/добавление}
 	\caption{Панель добавления новой книги}
-	\label{fig:}
+	\label{fig:44}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/редактирование}
+	\includegraphics[width=0.9\linewidth]{images/редактирование}
 	\caption{Панель редактирования существующей книги}
-	\label{fig:}
+	\label{fig:55}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{images/админзаказы}
+	\includegraphics[width=0.9\linewidth]{images/админзаказы}
 	\caption{Окно управления заказами всех пользователей}
-	\label{fig:}
+	\label{fig:66}
 \end{figure}
 
 \subsection{Сборка программной системы}
